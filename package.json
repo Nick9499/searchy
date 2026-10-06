@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "postinstall": "prisma skills sync || exit 0"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -19,7 +21,8 @@
     "lint-staged": "^17.6.0",
     "prettier": "^3.9.9",
     "typescript": "~6.0.2",
-    "typescript-eslint": "^8.71.0"
+    "typescript-eslint": "^8.71.0",
+    "prisma": "8.0.0-rc.20"
   },
   "dependencies": {
     "dotenv": "^18.0.5",
