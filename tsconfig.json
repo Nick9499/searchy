@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    /* File Layout */
+    "rootDir": "./src" /* Point this to your TypeScript source folder */,
+    "outDir": "./dist" /* The folder where your compiled JS code will go */,
+
+    /* Environment Settings */
+    "module": "nodenext" /* Matches modern Node.js module resolution */,
+    "target": "esnext" /* Utilises modern JS features supported by Node */,
+    "lib": ["esnext"] /* Includes modern global JS APIs */,
+    "types": ["node"] /* Ensures TypeScript loads Node.js global types */,
+
+    /* Other Outputs (Great for backend libraries/debugging) */
+    "sourceMap": true /* Helps map errors in compiled JS back to your TS files */,
+    "declaration": true /* Generates .d.ts files for type sharing */,
+    "declarationMap": true /* Maps your declaration files for easier IDE navigation */,
+
+    /* Stricter Typechecking Options */
+    "noUncheckedIndexedAccess": true /* Protects against reading undefined object properties */,
+    "exactOptionalPropertyTypes": true /* Keeps optional properties strictly accurate */,
+
+    /* Style Options (Highly recommended for production code) */
+    "noImplicitReturns": true /* Ensures all paths in a function return a value */,
+    "noUnusedLocals": true /* Prevents unused variable clutter */,
+    "noUnusedParameters": true /* Prevents unused function arguments */,
+    "noFallthroughCasesInSwitch": true /* Catches missing 'break' keywords in switch cases */,
+
+    /* Recommended Options */
+    "strict": true /* Enables full TypeScript strict mode protection */,
+    // "verbatimModuleSyntax": true /* Ensures explicit and clean import/export syntax */,
+    "isolatedModules": true /* Guarantees safe transpilation by single-file compilers */,
+    "noUncheckedSideEffectImports": true /* Ensures side-effect imports are verified */,
+    "moduleDetection": "force" /* Treats all files as modules, avoiding global scope bugs */,
+    "skipLibCheck": true /* Skips type checking inside node_modules to speed up builds */
+  },
+  "include": ["src/**/*"] /* Tells TS to only look for files in the src folder */,
+  "exclude": ["node_modules", "dist"] /* Keeps dependency and build folders out of compilation */
+}

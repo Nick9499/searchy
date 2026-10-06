@@ -1,0 +1,13 @@
+# Lefthook configuration for Node.js TypeScript Backend
+# Reference: https://lefthook.dev/configuration/
+
+pre-commit:
+  parallel: true
+  jobs:
+    - name: eslint-linter
+      glob: 'src/**/*.{js,ts}'
+      run: npx eslint {staged_files}
+
+    - name: prettier-formatter
+      glob: 'src/**/*.{js,ts,json,md}'
+      run: npx prettier --write {staged_files} && git add {staged_files}
